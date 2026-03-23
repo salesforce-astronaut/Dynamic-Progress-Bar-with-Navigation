@@ -18,6 +18,6 @@ Cons : <br/>
   1. Labels are affiliated with each step </br>
   2. Custom styling with easy modifications </br>
   Cons: </br>
-  1. Needs more space for the labels to not be crowded.
+  1. Needs more space for the labels to not be crowded.</br>
   2. Too many steps can be hard to accomodate however further changes can be made to ensure word-wrapping
 </p>
