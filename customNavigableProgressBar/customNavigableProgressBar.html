@@ -1,0 +1,20 @@
+<template>
+    <div class="stepper">
+        <ul class="stepper-list">
+            <div class="stepper-track"></div>
+            <template for:each={computedSteps} for:item="step">
+                <li key={step.index} class="stepper-item">
+                    <button disabled={isDisabled} class={step.circleClass} data-index={step.index}
+                        onclick={handleClick}>
+                        <span class="visually-hidden">
+                            Step {step.indexPlusOne}: {step.label}
+                        </span>
+                    </button>
+                    <div class="step-label">
+                        {step.label}
+                    </div>
+                </li>
+            </template>
+        </ul>
+    </div>
+</template>
