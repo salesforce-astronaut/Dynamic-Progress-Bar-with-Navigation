@@ -1,9 +1,12 @@
 <template>
     <lightning-card variant="Narrow" title="Account" icon-name="standard:account">
         <div class="navContainer slds-border_top">
-            <c-generic-navigable-progress-bar steps={stepLabels} current-index={stepIndex}
+            <!-- <c-generic-navigable-progress-bar steps={stepLabels} current-index={stepIndex}
                 onstepchange={handleStepChange} is-disabled={isNavDisabled} show-completed-steps=true>
-            </c-generic-navigable-progress-bar>
+            </c-generic-navigable-progress-bar> -->
+            <c-custom-navigable-progress-bar steps={stepLabels} current-index={stepIndex}
+                onstepchange={handleStepChange} is-disabled={isNavDisabled} show-completed-steps="true">
+            </c-custom-navigable-progress-bar>
         </div>
 
         <div class="navTitle slds-border_bottom">{currentStepLabel}</div>
