@@ -1,0 +1,26 @@
+<template>
+    <div class="slds-progress">
+        <ol class="slds-progress__list">
+            <template for:each={computedSteps} for:item="step">
+                <li key={step.index} class={step.listClass}>
+                    <div
+                        data-index={step.index}
+                        class={step.buttonClass}
+                        disabled={disableNavigation}
+                        onclick={handleNavigation}
+                        tabindex="0">
+                        <template lwc:if={showCompletedSteps}>
+                            <lightning-icon lwc:if={step.isComplete} size="xx-small" icon-name="utility:check"></lightning-icon>
+                        </template>                        
+                    </div>
+                </li>
+            </template>
+        </ol>
+        <div class="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax={maxValue}
+            aria-valuenow={currentIndex} role="progressbar">
+            <span class="slds-progress-bar__value" style={progressPercent}>
+                <span class="slds-assistive-text">Progress: {currentIndex}</span>
+            </span>
+        </div>
+    </div>
+</template>
