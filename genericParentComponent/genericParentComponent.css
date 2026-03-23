@@ -1,0 +1,12 @@
+.navContainer {
+	padding: 1rem 0 0.5rem 0;
+}
+
+.navTitle {
+	padding: 0 0 0.5rem 1rem;
+	font-weight: bold;
+}
+
+.bodyContainer{
+	padding: 0px 1rem;
+}
