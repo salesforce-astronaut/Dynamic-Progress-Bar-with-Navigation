@@ -23,7 +23,6 @@ export default class GenericParentComponent extends LightningElement {
         this._stepIndex = value;
         for (const [index, refKey] of this.stepRefs.entries()) {
             const ref = this.refs[refKey];
-            console.log(JSON.stringify(ref))
             if (!ref) {
                 continue;
             }
