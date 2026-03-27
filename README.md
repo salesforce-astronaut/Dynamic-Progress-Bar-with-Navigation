@@ -2,7 +2,8 @@
 This LWC component opens up the possibility of navigation while utilizing the progress bar.
 
 <p><strong> genericNavigableProgressBar -> </strong></p>
-<img width="418" height="427" alt="image" src="https://github.com/user-attachments/assets/111d1618-e273-4839-9ec7-224dafac78c0" />
+<img width="1281" height="291" alt="image" src="https://github.com/user-attachments/assets/8749e501-2872-4fec-bff7-6b5e11195f50" />
+
 <p>
 This one uses the standard tags provided by SLDS 1.<br/>
 Cons : <br/>
@@ -11,7 +12,7 @@ Cons : <br/>
 </p>
 
 <p><strong> customNavigableProgressBar -> </strong></p>
-<img width="1077" height="390" alt="image" src="https://github.com/user-attachments/assets/0355ef56-fbf0-4469-804e-da322ab0baa8" />
+<img width="1283" height="309" alt="image" src="https://github.com/user-attachments/assets/e913ec92-9dc7-4240-8be0-01a04f367e79" />
 <p>
   This one is custom with CSS driving complete UI.
   Pros: </br>
