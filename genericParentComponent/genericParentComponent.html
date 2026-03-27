@@ -1,29 +1,46 @@
 <template>
-    <lightning-card variant="Narrow" title="Account" icon-name="standard:account">
-        <div class="navContainer slds-border_top">
-            <!-- <c-generic-navigable-progress-bar steps={stepLabels} current-index={stepIndex}
-                onstepchange={handleStepChange} is-disabled={isNavDisabled} show-completed-steps=true>
-            </c-generic-navigable-progress-bar> -->
-            <c-custom-navigable-progress-bar steps={stepLabels} current-index={stepIndex}
-                onstepchange={handleStepChange} is-disabled={isNavDisabled} show-completed-steps="true">
-            </c-custom-navigable-progress-bar>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+            Navigable Progress Indicator
+        </h3>
+        <!-- Body -->
+        <div class="slds-p-horizontal_small">
+
+            <!-- Navigation Container -->
+            <div class="navContainer slds-border_top">
+                <!-- <c-generic-navigable-progress-bar steps={stepLabels} current-index={stepIndex}
+                    onstepchange={handleStepChange} is-disabled={isNavDisabled} show-completed-steps=true>
+                </c-generic-navigable-progress-bar> -->
+                <c-custom-navigable-progress-bar steps={stepLabels} current-index={stepIndex}
+                    onstepchange={handleStepChange} is-disabled={isNavDisabled} show-completed-steps="true">
+                </c-custom-navigable-progress-bar>
+            </div>
+
+            <!-- Navigation Title Change -->
+            <div class="navTitle slds-border_bottom">{currentStepLabel}</div>
+
+            <!-- Dynamic Navigable Sections -->
+            <div lwc:ref="ref1" class="bodyContainer" style="display:block;">
+                {loremIpsum1}
+            </div>
+            <div lwc:ref="ref2" class="bodyContainer" style="display:none;">
+                {loremIpsum2}
+            </div>
+            <div lwc:ref="ref3" class="bodyContainer" style="display:none;">
+                {loremIpsum1}
+            </div>
+            <div lwc:ref="ref4" class="bodyContainer" style="display:none;">
+                {loremIpsum2}
+            </div>
         </div>
 
-        <div class="navTitle slds-border_bottom">{currentStepLabel}</div>
-
-        <div lwc:ref="ref1" class="bodyContainer" style="display:block;">
-            {loremIpsum1}
+        <!-- Footer -->
+        <div slot="footer" style="text-align:right">
+            <lightning-button class="slds-m-left_x-small" lwc:if={showPrevious} label="Previous"
+                onclick={handlePrevious}></lightning-button>
+            <lightning-button class="slds-m-left_x-small" lwc:if={showNext} variant="brand" label="Next"
+                onclick={handleNext}></lightning-button>
         </div>
-        <div lwc:ref="ref2" class="bodyContainer" style="display:none;">
-            {loremIpsum2}
-        </div>
-        <div lwc:ref="ref3" class="bodyContainer" style="display:none;">
-            {loremIpsum1}
-        </div>
-        <div lwc:ref="ref4" class="bodyContainer" style="display:none;">
-            {loremIpsum2}
-        </div>
-
-        <p slot="footer">Card Footer</p>
     </lightning-card>
 </template>
